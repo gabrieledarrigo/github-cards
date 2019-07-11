@@ -1,11 +1,12 @@
 .App {
-  text-align: center;
+  padding: 1rem 3rem;
 }
 
-.App-header {
-  align-items: center;
+.App-title {
+  font-size: var(--font-size-1);
+}
+
+.App-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
+  max-width: 64rem;
 }

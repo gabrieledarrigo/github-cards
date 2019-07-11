@@ -1,6 +1,44 @@
+:root {
+  --font-family: 'Source Sans Pro', sans-serif;
+  --font-size-base: 16px;
+
+  --font-size-1: 2.488em;
+  --font-size-2: 2.074em;;
+  --font-size-3: 1.728em;
+  --font-size-4: 1.44em;
+  --font-size-5: 1.2em;
+  --font-size-6: 0.833em;
+
+  --font-weight-base: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 900;
+
+  --line-height-base: 1.45;
+  --line-height-title: 1.15;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-base)
+}
+
 body {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: var(--font-family);
+  line-height: var(--line-height-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+
+small {
+  font-size: var(--font-size-5);
 }

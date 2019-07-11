@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './UserCard.css';
 
 export default function UserCard({
   name,
@@ -12,42 +13,61 @@ export default function UserCard({
   public_repos,
 }) {
   return (
-    <article>
-      <header>
-        <figure>
+    <article className="UserCard">
+      <header className="UserCard-header">
+        <figure className="UserCard-figure">
           <img src={avatar_url} title={`${name} avatar`} alt={`${name} avatar`} />
         </figure>
-        <h2>
-          {name}
-        </h2>
-        <h3>
-          {login}
-        </h3>
-        {
-          company && (
-            <h4>
-              {company}
-            </h4>
-          )
-        }
+
+        <div className="UserCard-header-content">
+          <h2 className="UserCard-name">
+            {name}
+          </h2>
+          <h3 className="UserCard-login">
+            {login}
+          </h3>
+          {
+            company && (
+              <h4 className="UserCard-company">
+                {company}
+              </h4>
+            )
+          }
+        </div>
       </header>
 
-      <div>
-        <p>
+      <div className="UserCard-content">
+        <p className="UserCard-bio">
           {bio}
         </p>
-        <ul>
-          <li>
-            Followers: {followers}
-          </li>
-          <li>
-            Gists: {public_gists}
-          </li>
-          <li>
-            Repository: {public_repos}
-          </li>
-        </ul>
       </div>
+
+      <ul className="UserCard-stats">
+        <li className="UserCard-stats-item">
+          <strong>
+            {followers}
+          </strong>
+          <div>
+            Followers
+          </div>
+        </li>
+        <li className="UserCard-stats-item">
+          <strong>
+            {public_gists}
+          </strong>
+          <div>
+            Gists
+          </div>
+        </li>
+        <li className="UserCard-stats-item">
+          <strong>
+            {public_repos}
+          </strong>
+          <div>
+            Repositories
+          </div>
+        </li>
+      </ul>
     </article>
   );
 }
