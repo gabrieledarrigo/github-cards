@@ -12,3 +12,8 @@
   background-color: var(--color-gray-200);
   cursor: pointer;
 }
+
+.button:focus {
+  background-color: var(--color-gray-200);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;
+}
