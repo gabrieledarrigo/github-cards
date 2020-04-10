@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly 1`] = `
+<input
+  name="input-name"
+  onChange={[Function]}
+  placeholder="This is the placeholder"
+  required={true}
+  type="TEXT"
+  value="A value"
+/>
+`;

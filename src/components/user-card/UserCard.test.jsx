@@ -1,6 +1,6 @@
 import React from 'react';
-import UserCard from './UserCard';
 import renderer from 'react-test-renderer';
+import UserCard from './UserCard';
 
 describe('UserCard', () => {
   const props = {
@@ -39,7 +39,7 @@ describe('UserCard', () => {
 
   it('should render correctly', () => {
     const tree = renderer.create(
-      <UserCard {...props} />
+      <UserCard {...props} />,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();

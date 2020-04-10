@@ -1,5 +1,6 @@
-const URL = "https://api.github.com";
+const URL = 'https://api.github.com';
 
-export async function getUser(username) {
-    return await (await fetch(`${URL}/users/${username}`)).json()
+export default async function getUser(username) {
+  const response = await window.fetch(`${URL}/users/${username}`);
+  return response.json();
 }

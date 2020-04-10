@@ -16,7 +16,11 @@ export default function UserCard({
     <article className="UserCard">
       <header className="UserCard-header">
         <figure className="UserCard-figure">
-          <img src={avatar_url} title={`${name} avatar`} alt={`${name} avatar`} />
+          <img
+            src={avatar_url}
+            title={`${name} avatar`}
+            alt={`${name} avatar`}
+          />
         </figure>
 
         <div className="UserCard-header-content">
@@ -36,11 +40,15 @@ export default function UserCard({
         </div>
       </header>
 
-      <div className="UserCard-content">
-        <p className="UserCard-bio">
-          {bio}
-        </p>
-      </div>
+      {
+        bio && (
+          <div className="UserCard-content">
+            <p className="UserCard-bio">
+              {bio}
+            </p>
+          </div>
+        )
+      }
 
       <ul className="UserCard-stats">
         <li className="UserCard-stats-item">
@@ -75,10 +83,24 @@ export default function UserCard({
 UserCard.propTypes = {
   name: PropTypes.string.isRequired,
   login: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
+  company: PropTypes.string,
   avatar_url: PropTypes.string.isRequired,
-  bio: PropTypes.string.isRequired,
+  bio: PropTypes.string,
   followers: PropTypes.number.isRequired,
   public_gists: PropTypes.number.isRequired,
   public_repos: PropTypes.number.isRequired,
 };
+
+UserCard.defaultProps = {
+  company: null,
+  bio: null,
+};
+
+name;
+login;
+company, optional;
+avatar_url;
+bio, optional;
+followers;
+public_gists;
+public_repos;

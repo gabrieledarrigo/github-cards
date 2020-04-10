@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import UserCard from './components/user-card/UserCard';
-import { getUser } from './services/users';
+import getUser from './services/users';
 import './App.css';
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
     setUsername(target.value);
   };
 
-  const submitHandler = async () => {
-    const user = await getUser(username);
-    setUser(user);
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    setUser(await getUser(username));
   };
 
   return (
@@ -25,18 +25,20 @@ function App() {
       </header>
 
       <div className="App-content">
-        <input
-          name="github-user"
-          type="text"
-          placeholder="Insert a valid Github username"
-          value={username}
-          onChange={usernameHandler}
-        />
-        <button onClick={submitHandler}>
-          Submit
-        </button>
+        <form onSubmit={submitHandler}>
+          <input
+            name="github-user"
+            type="text"
+            placeholder="Insert a valid Github username"
+            value={username}
+            onChange={usernameHandler}
+          />
+          <button type="submit">
+            Submit
+          </button>
+        </form>
       </div>
-    
+
       <div className="App-content">
         {
           user && (

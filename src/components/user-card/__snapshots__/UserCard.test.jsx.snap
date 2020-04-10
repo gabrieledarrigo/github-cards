@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserCard should render correctly 1`] = `
+<article
+  className="UserCard"
+>
+  <header
+    className="UserCard-header"
+  >
+    <figure
+      className="UserCard-figure"
+    >
+      <img
+        alt="Gabriele D'Arrigo avatar"
+        src="https://avatars1.githubusercontent.com/u/1985555?v=4"
+        title="Gabriele D'Arrigo avatar"
+      />
+    </figure>
+    <div
+      className="UserCard-header-content"
+    >
+      <h2
+        className="UserCard-name"
+      >
+        Gabriele D'Arrigo
+      </h2>
+      <h3
+        className="UserCard-login"
+      >
+        gabrieledarrigo
+      </h3>
+      <h4
+        className="UserCard-company"
+      >
+        MotorK / @ripliveit 
+      </h4>
+    </div>
+  </header>
+  <div
+    className="UserCard-content"
+  >
+    <p
+      className="UserCard-bio"
+    >
+      I'm a guy (:robot:) with a strong passion for programming and cutting-edge web technologies! I :heart: comics, cinema, sports, video games and my little Debby!
+    </p>
+  </div>
+  <ul
+    className="UserCard-stats"
+  >
+    <li
+      className="UserCard-stats-item"
+    >
+      <strong>
+        26
+      </strong>
+      <div>
+        Followers
+      </div>
+    </li>
+    <li
+      className="UserCard-stats-item"
+    >
+      <strong>
+        12
+      </strong>
+      <div>
+        Gists
+      </div>
+    </li>
+    <li
+      className="UserCard-stats-item"
+    >
+      <strong>
+        30
+      </strong>
+      <div>
+        Repositories
+      </div>
+    </li>
+  </ul>
+</article>
+`;

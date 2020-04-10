@@ -9,4 +9,5 @@
 .App-content {
   display: flex;
   max-width: 64rem;
+  margin: 2rem 0;
 }

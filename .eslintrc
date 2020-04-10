@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "jest": true
+  },
+  "globals": {
+    "window": true
+  },
+  "rules": {
+    "max-len": [
+      "warn",
+      80
+    ]
+  }
+}
