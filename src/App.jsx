@@ -3,6 +3,7 @@ import UserCard from './components/user-card/UserCard';
 import getUser from './services/users';
 import './App.css';
 import Button, { ButtonType } from './components/button/Button';
+import Input from './components/input/Input';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -27,7 +28,7 @@ function App() {
 
       <div className="App-content">
         <form onSubmit={submitHandler}>
-          <input
+          <Input
             name="github-user"
             type="text"
             placeholder="Insert a valid Github username"

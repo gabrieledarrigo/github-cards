@@ -30,25 +30,21 @@ export default function UserCard({
           <h3 className={styles.login}>
             {login}
           </h3>
-          {
-            company && (
-              <h4 className={styles.company}>
-                {company}
-              </h4>
-            )
-          }
+          {company && (
+            <h4 className={styles.company}>
+              {company}
+            </h4>
+          )}
         </div>
       </header>
 
-      {
-        bio && (
-          <div className={styles.content}>
-            <p className={styles.bio}>
-              {bio}
-            </p>
-          </div>
-        )
-      }
+      {bio && (
+        <div className={styles.content}>
+          <p className={styles.bio}>
+            {bio}
+          </p>
+        </div>
+      )}
 
       <ul className={styles.stats}>
         <li className={styles.statsItem}>

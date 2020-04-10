@@ -2,11 +2,12 @@
 
 exports[`Input should render correctly 1`] = `
 <input
+  className="input"
   name="input-name"
   onChange={[Function]}
   placeholder="This is the placeholder"
   required={true}
-  type="TEXT"
+  type="text"
   value="A value"
 />
 `;
