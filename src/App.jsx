@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
 import UserCard from './components/user-card/UserCard';
 import getUser from './services/users';
+import UserForm from './components/user-form/UserForm';
 import './App.css';
-import Button, { ButtonType } from './components/button/Button';
-import Input from './components/input/Input';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [username, setUsername] = useState('');
 
-  const usernameHandler = ({ target }) => {
-    setUsername(target.value);
-  };
-
-  const submitHandler = async (e) => {
-    e.preventDefault();
+  const onSubmit = async ({ username }) => {
     setUser(await getUser(username));
   };
 
@@ -27,32 +20,19 @@ function App() {
       </header>
 
       <div className="App-content">
-        <form onSubmit={submitHandler}>
-          <Input
-            name="github-user"
-            type="text"
-            placeholder="Insert a valid Github username"
-            value={username}
-            onChange={usernameHandler}
-          />
-          <Button type={ButtonType.SUBMIT}>
-            Search
-          </Button>
-        </form>
+        <UserForm onSubmit={onSubmit} />
       </div>
 
       <div className="App-content">
-        {
-          user && (
-            <UserCard {...{
-              ...user,
-              avatarUrl: user.avatar_url,
-              publicGists: user.public_gists,
-              publicRepos: user.public_repos,
-            }}
-            />
-          )
-        }
+        {user && (
+          <UserCard {...{
+            ...user,
+            avatarUrl: user.avatar_url,
+            publicGists: user.public_gists,
+            publicRepos: user.public_repos,
+          }}
+          />
+        )}
       </div>
     </div>
   );

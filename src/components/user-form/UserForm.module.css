@@ -1,0 +1,13 @@
+.form {
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.inputGroup :first-child,
+.inputGroup :last-child {
+  margin: 0 0.5rem;
+}
