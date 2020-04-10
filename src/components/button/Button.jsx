@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Button.module.css';
 
 export const ButtonType = {
   BUTTON: 'button',
@@ -14,6 +15,7 @@ export default function Button({
   return (
     // eslint-disable-next-line react/button-has-type
     <button
+      className={styles.button}
       type={type}
       {...rest}
     >

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import UserCard from './components/user-card/UserCard';
 import getUser from './services/users';
 import './App.css';
+import Button, { ButtonType } from './components/button/Button';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -33,16 +34,22 @@ function App() {
             value={username}
             onChange={usernameHandler}
           />
-          <button type="submit">
-            Submit
-          </button>
+          <Button type={ButtonType.SUBMIT}>
+            Search
+          </Button>
         </form>
       </div>
 
       <div className="App-content">
         {
           user && (
-            <UserCard {...user} />
+            <UserCard {...{
+              ...user,
+              avatarUrl: user.avatar_url,
+              publicGists: user.public_gists,
+              publicRepos: user.public_repos,
+            }}
+            />
           )
         }
       </div>
