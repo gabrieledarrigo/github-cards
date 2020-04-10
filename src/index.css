@@ -9,13 +9,19 @@
   --font-size-5: 1.2em;
   --font-size-6: 0.833em;
 
-  --font-weight-base: 400;
-  --font-weight-bold: 700;
-  --font-weight-bolder: 900;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+  --font-weight-900: 900;
 
   --line-height-base: 1.45;
   --line-height-title: 1.15;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray-200: #EDEDED;
+  --color-gray-500: #999999;
 }
+
 
 *,
 *:before,

@@ -2,13 +2,13 @@
 
 exports[`UserCard should render correctly 1`] = `
 <article
-  className="UserCard"
+  className="userCard"
 >
   <header
-    className="UserCard-header"
+    className="header"
   >
     <figure
-      className="UserCard-figure"
+      className="figure"
     >
       <img
         alt="Gabriele D'Arrigo avatar"
@@ -17,64 +17,76 @@ exports[`UserCard should render correctly 1`] = `
       />
     </figure>
     <div
-      className="UserCard-header-content"
+      className="headerContent"
     >
       <h2
-        className="UserCard-name"
+        className="name"
       >
         Gabriele D'Arrigo
       </h2>
       <h3
-        className="UserCard-login"
+        className="login"
       >
         gabrieledarrigo
       </h3>
       <h4
-        className="UserCard-company"
+        className="company"
       >
         MotorK / @ripliveit 
       </h4>
     </div>
   </header>
   <div
-    className="UserCard-content"
+    className="content"
   >
     <p
-      className="UserCard-bio"
+      className="bio"
     >
       I'm a guy (:robot:) with a strong passion for programming and cutting-edge web technologies! I :heart: comics, cinema, sports, video games and my little Debby!
     </p>
   </div>
   <ul
-    className="UserCard-stats"
+    className="stats"
   >
     <li
-      className="UserCard-stats-item"
+      className="statsItem"
     >
-      <strong>
+      <strong
+        className="statsValue"
+      >
         26
       </strong>
-      <div>
+      <div
+        className="statsName"
+      >
         Followers
       </div>
     </li>
     <li
-      className="UserCard-stats-item"
+      className="statsItem"
     >
-      <strong>
+      <strong
+        className="statsValue"
+      >
         12
       </strong>
-      <div>
+      <div
+        className="statsName"
+      >
         Gists
       </div>
     </li>
     <li
-      className="UserCard-stats-item"
+      className="statsItem"
     >
-      <strong>
+      <strong
+        className="statsValue"
+      >
         30
       </strong>
-      <div>
+      <div
+        className="statsName"
+      >
         Repositories
       </div>
     </li>

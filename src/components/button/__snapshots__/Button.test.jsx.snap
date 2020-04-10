@@ -2,7 +2,7 @@
 
 exports[`Button should render correctly 1`] = `
 <button
-  type="BUTTON"
+  type="button"
 >
   A text
 </button>

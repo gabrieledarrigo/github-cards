@@ -2,23 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const ButtonType = {
-  BUTTON: 'BUTTON',
-  SUBMIT: 'SUBMIT',
+  BUTTON: 'button',
+  SUBMIT: 'submit',
 };
 
 export default function Button({
   type,
   children,
+  ...rest
 }) {
   return (
-    <button type={type}>
+    // eslint-disable-next-line react/button-has-type
+    <button
+      type={type}
+      {...rest}
+    >
       {children}
     </button>
   );
 }
 
 Button.propTypes = {
-  type: PropTypes.oneOf([ButtonType.BUTTON, ButtonType.SUBMIT]),
+  type: PropTypes.oneOf([
+    ButtonType.BUTTON,
+    ButtonType.SUBMIT,
+  ]),
   children: PropTypes.node.isRequired,
 };
 

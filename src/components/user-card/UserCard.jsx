@@ -1,38 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './UserCard.css';
+import styles from './UserCard.module.css';
 
 export default function UserCard({
   name,
   login,
   company,
-  avatar_url,
+  avatarUrl,
   bio,
   followers,
-  public_gists,
-  public_repos,
+  publicGists,
+  publicRepos,
 }) {
   return (
-    <article className="UserCard">
-      <header className="UserCard-header">
-        <figure className="UserCard-figure">
+    <article className={styles.userCard}>
+      <header className={styles.header}>
+        <figure className={styles.figure}>
           <img
-            src={avatar_url}
+            src={avatarUrl}
             title={`${name} avatar`}
             alt={`${name} avatar`}
           />
         </figure>
 
-        <div className="UserCard-header-content">
-          <h2 className="UserCard-name">
+        <div className={styles.headerContent}>
+          <h2 className={styles.name}>
             {name}
           </h2>
-          <h3 className="UserCard-login">
+          <h3 className={styles.login}>
             {login}
           </h3>
           {
             company && (
-              <h4 className="UserCard-company">
+              <h4 className={styles.company}>
                 {company}
               </h4>
             )
@@ -42,36 +42,36 @@ export default function UserCard({
 
       {
         bio && (
-          <div className="UserCard-content">
-            <p className="UserCard-bio">
+          <div className={styles.content}>
+            <p className={styles.bio}>
               {bio}
             </p>
           </div>
         )
       }
 
-      <ul className="UserCard-stats">
-        <li className="UserCard-stats-item">
-          <strong>
+      <ul className={styles.stats}>
+        <li className={styles.statsItem}>
+          <strong className={styles.statsValue}>
             {followers}
           </strong>
-          <div>
+          <div className={styles.statsName}>
             Followers
           </div>
         </li>
-        <li className="UserCard-stats-item">
-          <strong>
-            {public_gists}
+        <li className={styles.statsItem}>
+          <strong className={styles.statsValue}>
+            {publicGists}
           </strong>
-          <div>
+          <div className={styles.statsName}>
             Gists
           </div>
         </li>
-        <li className="UserCard-stats-item">
-          <strong>
-            {public_repos}
+        <li className={styles.statsItem}>
+          <strong className={styles.statsValue}>
+            {publicRepos}
           </strong>
-          <div>
+          <div className={styles.statsName}>
             Repositories
           </div>
         </li>
@@ -84,23 +84,14 @@ UserCard.propTypes = {
   name: PropTypes.string.isRequired,
   login: PropTypes.string.isRequired,
   company: PropTypes.string,
-  avatar_url: PropTypes.string.isRequired,
+  avatarUrl: PropTypes.string.isRequired,
   bio: PropTypes.string,
   followers: PropTypes.number.isRequired,
-  public_gists: PropTypes.number.isRequired,
-  public_repos: PropTypes.number.isRequired,
+  publicGists: PropTypes.number.isRequired,
+  publicRepos: PropTypes.number.isRequired,
 };
 
 UserCard.defaultProps = {
   company: null,
   bio: null,
 };
-
-name;
-login;
-company, optional;
-avatar_url;
-bio, optional;
-followers;
-public_gists;
-public_repos;

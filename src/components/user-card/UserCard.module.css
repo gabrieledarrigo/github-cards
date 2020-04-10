@@ -1,0 +1,82 @@
+.userCard {
+  border: 1px solid #ededed;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  min-width: 400px;
+}
+
+.header {
+  display: flex;
+  padding: 1rem;
+}
+
+.headerContent {
+  margin: 0 0 0 1rem;
+}
+
+.name {
+  font-size: var(--font-size-4);
+  margin: 0;
+}
+
+.login {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-400);
+  margin: 0;
+}
+
+.company {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-400);
+  margin: 0;
+}
+
+.bio {
+  margin: 0;
+}
+
+.figure {
+  margin: 0;
+}
+
+.figure > img {
+  display: block;
+  height: auto;
+  max-width: 6rem;
+  width: 100%;
+}
+
+.content {
+  padding: 0 1rem 1rem;
+}
+
+.stats {
+  border-top: 1px solid var(--color-gray-200);
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.statsItem {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.statsItem:nth-child(2) {
+  border-left: 1px solid var(--color-gray-200);
+  border-right: 1px solid var(--color-gray-200);
+}
+
+.statsName {
+  color: var(--color-gray-500);
+}
+
+.statsValue {
+  font-size: var(--font-size-4);
+}
