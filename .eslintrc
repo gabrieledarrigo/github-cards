@@ -9,7 +9,10 @@
   "rules": {
     "max-len": [
       "warn",
-      80
+      120
+    ],
+    "react/jsx-props-no-spreading": [
+      "off"
     ]
   }
 }
