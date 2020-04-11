@@ -20,7 +20,7 @@ function App() {
   };
 
   return (
-    <div className={styles.app}>
+    <section className={styles.app}>
       <header className={styles.header}>
         <h1 className={styles.title}>
           GitHub Cards
@@ -37,7 +37,7 @@ function App() {
           <div className={styles.error}>
             <span
               role="img"
-              aria-label="error"
+              aria-label="Error"
             >
               ❌
             </span>
@@ -58,7 +58,28 @@ function App() {
           />
         )}
       </div>
-    </div>
+
+      <footer className={styles.footer}>
+        <p>
+          Made with
+          <span
+            role="img"
+            aria-label="Love"
+          >
+            ❤️
+          </span>
+          {' '}
+          by
+          {' '}
+          <a
+            href="https://www.github.com/gabrieledarrigo"
+            title="@gabrieledarrigo"
+          >
+            @gabrieledarrigo
+          </a>
+        </p>
+      </footer>
+    </section>
   );
 }
 

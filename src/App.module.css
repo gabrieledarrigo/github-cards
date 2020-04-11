@@ -30,6 +30,18 @@
   margin: 0.5rem;
 }
 
+.footer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.footer a {
+  color: var(--color-info);
+}
+
 @media (min-width: 1024px) {
   .content {
     max-width: 64rem;
