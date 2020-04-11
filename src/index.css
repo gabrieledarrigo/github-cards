@@ -1,6 +1,6 @@
 :root {
   --font-family: 'Source Sans Pro', sans-serif;
-  --font-size-base: 16px;
+  --font-size-base: 15px;
 
   --font-size-1: 2.488em;
   --font-size-2: 2.074em;;
@@ -22,6 +22,11 @@
   --color-gray-500: #999999;
 }
 
+@media (min-width: 1024px) {
+  :root {
+    --font-size-base: 16px;
+  }
+}
 
 *,
 *:before,

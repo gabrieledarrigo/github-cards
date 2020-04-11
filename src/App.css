@@ -1,5 +1,7 @@
 .App {
-  padding: 1rem 3rem;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
 }
 
 .App-title {
@@ -8,6 +10,11 @@
 
 .App-content {
   display: flex;
-  max-width: 64rem;
   margin: 2rem 0;
+}
+
+@media (min-width: 1024px) {
+  .App-content {
+    max-width: 64rem;
+  }
 }
