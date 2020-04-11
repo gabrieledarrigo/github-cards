@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import styles from './UserCard.module.css';
 
@@ -12,8 +14,15 @@ export default function UserCard({
   publicGists,
   publicRepos,
 }) {
+  const goToProfilePage = useCallback(() => {
+    window.location.assign(`https://www.github.com/${login}`);
+  }, [login]);
+
   return (
-    <article className={styles.userCard}>
+    <article
+      className={styles.userCard}
+      onClick={goToProfilePage}
+    >
       <header className={styles.header}>
         <figure className={styles.figure}>
           <img

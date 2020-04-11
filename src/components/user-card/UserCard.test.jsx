@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import UserCard from './UserCard';
 
 describe('UserCard', () => {
@@ -14,11 +15,29 @@ describe('UserCard', () => {
     publicRepos: 30,
   };
 
+  beforeEach(() => {
+    jest.spyOn(window.location, 'assign').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should render correctly', () => {
     const tree = renderer.create(
       <UserCard {...props} />,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should open the related profile page on GitHub', () => {
+    const wrapper = shallow(
+      <UserCard {...props} />,
+    );
+
+    wrapper.simulate('click');
+
+    expect(window.location.assign).toHaveBeenCalledWith(`https://www.github.com/${props.login}`);
   });
 });

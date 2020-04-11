@@ -6,9 +6,17 @@ import styles from './App.module.css';
 
 function App() {
   const [user, setUser] = useState(null);
+  const [error, setError] = useState(null);
 
   const onSubmit = async ({ username }) => {
-    setUser(await getUser(username));
+    setError(null);
+
+    try {
+      const result = await getUser(username);
+      setUser(result);
+    } catch (err) {
+      setError(err);
+    }
   };
 
   return (
@@ -24,6 +32,19 @@ function App() {
 
       <div className={styles.content}>
         <UserForm onSubmit={onSubmit} />
+
+        {error && (
+          <div className={styles.error}>
+            <span
+              role="img"
+              aria-label="error"
+            >
+              ❌
+            </span>
+            {' '}
+            Your user cannot be found. Please retry!
+          </div>
+        )}
       </div>
 
       <div className={styles.content}>

@@ -3,6 +3,7 @@
 exports[`UserCard should render correctly 1`] = `
 <article
   className="userCard"
+  onClick={[Function]}
 >
   <header
     className="header"

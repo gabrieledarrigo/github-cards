@@ -1,18 +1,18 @@
 .button {
   appearance: none;
-  background-color: var(--color-gray-200);
+  background-color: var(--color-info);
   border: none;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px;
+  color: var(--color-white);
   outline: none;
   padding: 1rem 2rem;
 }
 
 .button:hover {
-  background-color: var(--color-white);
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 6px;
 }
 
 .button:focus {
-  background-color: var(--color-white);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 6px;
 }

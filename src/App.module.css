@@ -21,7 +21,13 @@
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   margin: 3rem auto;
+}
+
+.error {
+  color: var(--color-error);
+  margin: 0.5rem;
 }
 
 @media (min-width: 1024px) {
