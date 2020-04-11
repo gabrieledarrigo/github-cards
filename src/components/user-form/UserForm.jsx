@@ -28,7 +28,7 @@ export default function UserForm({
         <Input
           name="username"
           type="text"
-          placeholder="Insert a valid Github username"
+          placeholder="Your GitHub username"
           value={username}
           onChange={onChange}
           required

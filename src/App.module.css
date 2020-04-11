@@ -1,0 +1,31 @@
+.app {
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-size-1);
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--color-gray-700);
+  font-size: var(--font-size-4);
+  margin-top: 0;
+}
+
+.content {
+  display: flex;
+  margin: 3rem auto;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    max-width: 64rem;
+  }
+}

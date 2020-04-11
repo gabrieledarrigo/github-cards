@@ -20,6 +20,7 @@
   --color-black: #000000;
   --color-gray-200: #EDEDED;
   --color-gray-500: #999999;
+  --color-gray-700: #4f4f4f;
 }
 
 @media (min-width: 1024px) {
@@ -53,3 +54,4 @@ p {
 small {
   font-size: var(--font-size-5);
 }
+
