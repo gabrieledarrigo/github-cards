@@ -8,7 +8,7 @@ export default function UserForm({
   initialValues,
   onSubmit,
 }) {
-  const [username, setUsername] = useState(initialValues?.username ?? '');
+  const [username, setUsername] = useState(initialValues ? initialValues.username : '');
 
   const onChange = useCallback(({ target }) => {
     setUsername(target.value);

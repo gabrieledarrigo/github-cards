@@ -8,7 +8,7 @@ describe('UserCard', () => {
     login: 'gabrieledarrigo',
     company: 'MotorK / @ripliveit ',
     avatarUrl: 'https://avatars1.githubusercontent.com/u/1985555?v=4',
-    bio: 'I\'m a guy (:robot:) with a strong passion for programming and cutting-edge web technologies! I :heart: comics, cinema, sports, video games and my little Debby!',
+    bio: 'I\'m a guy (:robot:) with a strong passion for programming and cutting-edge web technologies!',
     followers: 26,
     publicGists: 12,
     publicRepos: 30,
