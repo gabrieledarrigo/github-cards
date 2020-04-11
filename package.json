@@ -1,5 +1,6 @@
 {
   "name": "github-cards",
+  "description": "Create your personal GitHub Card",
   "version": "0.1.0",
   "dependencies": {
     "prop-types": "15.7.2",

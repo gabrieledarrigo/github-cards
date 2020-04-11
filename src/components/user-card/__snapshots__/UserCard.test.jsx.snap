@@ -42,7 +42,7 @@ exports[`UserCard should render correctly 1`] = `
     <p
       className="bio"
     >
-      I'm a guy (:robot:) with a strong passion for programming and cutting-edge web technologies! I :heart: comics, cinema, sports, video games and my little Debby!
+      I'm a guy (:robot:) with a strong passion for programming and cutting-edge web technologies!
     </p>
   </div>
   <ul
