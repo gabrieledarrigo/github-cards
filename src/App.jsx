@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import UserCard from './components/user-card/UserCard';
-import getUser from './services/users';
+import { getUser } from './services/github';
 import UserForm from './components/user-form/UserForm';
 import styles from './App.module.css';
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import getUser from './services/users';
+import { getUser } from './services/github';
 import App from './App';
 import UserForm from './components/user-form/UserForm';
 import UserCard from './components/user-card/UserCard';
 
-jest.mock('./services/users');
+jest.mock('./services/github');
 
 describe('App', () => {
   afterEach(() => {
