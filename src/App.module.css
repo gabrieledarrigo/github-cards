@@ -10,12 +10,14 @@
 
 .title {
   font-size: var(--font-size-1);
+  font-weight: var(--font-weight-900);
   margin-bottom: 0.25rem;
 }
 
 .subtitle {
   color: var(--color-gray-700);
   font-size: var(--font-size-4);
+  font-weight: var(--font-weight-400);
   margin-top: 0;
 }
 

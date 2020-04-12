@@ -20,9 +20,12 @@
   --color-black: #000000;
   --color-error: #F20000;
   --color-info: #016ABC;
+
+  --color-blue-200: #2CABFF;
   --color-gray-200: #EDEDED;
+  --color-gray-400: #E0E0E0;
   --color-gray-500: #999999;
-  --color-gray-700: #4f4f4f;
+  --color-gray-700: #757575;
 }
 
 @media (min-width: 1024px) {

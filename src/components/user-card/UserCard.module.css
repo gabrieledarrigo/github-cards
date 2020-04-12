@@ -1,6 +1,6 @@
 .userCard {
   border: 1px solid var(--color-gray-200);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px; */
 }
 
 .userCard:hover {
@@ -18,18 +18,19 @@
 
 .name {
   font-size: var(--font-size-5);
+  font-weight: var(--font-weight-900);
   margin: 0;
 }
 
 .login {
-  color: var(--color-gray-500);
   font-size: var(--font-size-5);
   font-weight: var(--font-weight-400);
   margin: 0;
 }
 
 .company {
-  font-size: var(--font-size-6);
+  color: var(--color-gray-500);
+  font-size: var(--font-size-5);
   font-weight: var(--font-weight-400);
   margin: 0;
 }

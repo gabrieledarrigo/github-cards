@@ -1,8 +1,7 @@
 .button {
   appearance: none;
-  background-color: var(--color-info);
+  background-color: var(--color-blue-200);
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px;
   color: var(--color-white);
   outline: none;
   padding: 1rem 2rem;

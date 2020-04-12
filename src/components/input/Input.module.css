@@ -1,11 +1,16 @@
 .input {
   appearance: none;
   border: none;
-  border: 1px solid var(--color-gray-200);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px;
+  border: 1px solid var(--color-gray-400);
+  color: var(--color-black);
+  font-size: var(--font-size-base);
   outline: none;
   padding: 1rem;
   width: 100%;
+}
+
+::placeholder {
+  color: var(--color-gray-500);
 }
 
 input:focus {
