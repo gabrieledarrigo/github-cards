@@ -6,6 +6,9 @@
   "globals": {
     "window": true
   },
+  "plugins": [
+    "react-hooks"
+  ],
   "rules": {
     "max-len": [
       "warn",
