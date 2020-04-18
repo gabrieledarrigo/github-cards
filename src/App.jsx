@@ -1,22 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import UserCard from './components/user-card/UserCard';
 import { getUser } from './services/github';
 import UserForm from './components/user-form/UserForm';
 import styles from './App.module.css';
 
-function App() {
+function App({
+  match,
+  history,
+}) {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
-  const onSubmit = async ({ username }) => {
+  useEffect(() => {
     setError(null);
 
-    try {
-      const result = await getUser(username);
-      setUser(result);
-    } catch (err) {
-      setError(err);
+    async function fetch() {
+      const { params: { username } } = match;
+
+      if (username) {
+        try {
+          const result = await getUser(username);
+          setUser(result);
+        } catch (err) {
+          setError(err);
+          setUser(undefined);
+        }
+      }
     }
+
+    fetch();
+  }, [match]);
+
+  const onSubmit = async ({ username }) => {
+    history.push(`/${username}`);
   };
 
   return (
@@ -82,5 +99,24 @@ function App() {
     </section>
   );
 }
+
+App.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      username: PropTypes.string,
+    }),
+  }),
+};
+
+App.defaultProps = {
+  match: {
+    params: {
+      username: null,
+    },
+  },
+};
 
 export default App;

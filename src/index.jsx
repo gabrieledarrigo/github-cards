@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from './App';
+import './index.css';
 
-ReactDOM.render(<App />, window.document.getElementById('root'));
+ReactDOM.render(
+  <Router>
+    <Route
+      path="/:username?"
+      component={(props) => <App {...props} />}
+    />
+  </Router>,
+  window.document.getElementById('root'),
+);
