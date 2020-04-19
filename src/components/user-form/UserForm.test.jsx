@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import UserForm from './UserForm';
 import Input from '../input/Input';
 
@@ -19,7 +19,7 @@ describe('UserForm', () => {
     const onSubmit = jest.fn();
     const preventDefault = jest.fn();
 
-    const wrapper = shallow(
+    const wrapper = mount(
       <UserForm
         onSubmit={onSubmit}
       />,

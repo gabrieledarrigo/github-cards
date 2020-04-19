@@ -1,28 +1,25 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import Input from '../input/Input';
+import Form from '../form/Form';
 import Button, { ButtonType } from '../button/Button';
 import styles from './UserForm.module.css';
 
-export default function UserForm({
-  initialValues,
-  onSubmit,
-}) {
-  const [username, setUsername] = useState(initialValues ? initialValues.username : '');
+export default function UserForm({ initialValues, onSubmit }) {
+  const [username, setUsername] = useState(
+    initialValues ? initialValues.username : '',
+  );
 
   const onChange = useCallback(({ target }) => {
     setUsername(target.value);
   }, []);
 
-  const internalOnSubmit = useCallback((e) => {
-    e.preventDefault();
-    onSubmit({ username });
-  }, [onSubmit, username]);
-
   return (
-    <form
+    <Form
       className={styles.form}
-      onSubmit={internalOnSubmit}
+      onSubmit={() => {
+        onSubmit({ username });
+      }}
     >
       <div className={styles.inputGroup}>
         <Input
@@ -33,11 +30,9 @@ export default function UserForm({
           onChange={onChange}
           required
         />
-        <Button type={ButtonType.SUBMIT}>
-          Search
-        </Button>
+        <Button type={ButtonType.SUBMIT}>Search</Button>
       </div>
-    </form>
+    </Form>
   );
 }
 
