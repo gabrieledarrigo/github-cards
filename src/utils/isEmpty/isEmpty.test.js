@@ -33,7 +33,7 @@ describe('isEmpty', () => {
 
   describe('case error', () => {
     it('it should trown and error', () => {
-      expect(isEmpty).toThrowError('Entry not type obect or array');
+      expect(isEmpty).toThrowError('Entry not valid type obect, array or string');
     });
   });
 });

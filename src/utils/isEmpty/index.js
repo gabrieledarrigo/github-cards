@@ -7,5 +7,5 @@ export default function isEmpty(entry) {
     return Object.keys(entry).length === 0;
   }
 
-  throw new Error('Entry not type obect or array');
+  throw new Error('Entry not valid type obect, array or string');
 }
