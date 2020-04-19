@@ -2,6 +2,16 @@
   width: 100%;
 }
 
+.header {
+  text-align: center;
+}
+
+.title {
+  color: var(--color-gray-700);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-400);
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;

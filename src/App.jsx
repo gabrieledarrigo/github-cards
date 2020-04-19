@@ -77,12 +77,6 @@ function App({
         )}
       </div>
 
-      <header className={styles.header}>
-        <h2 className={styles.subtitle}>
-          Discover trending developers
-        </h2>
-      </header>
-
       <div className={styles.content}>
         <TrendingDevelopers />
       </div>

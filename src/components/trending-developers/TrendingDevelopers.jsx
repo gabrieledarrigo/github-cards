@@ -28,6 +28,12 @@ function TrendingDevelopers() {
 
   return (
     <div className={styles.trendingDevelopers}>
+      <header className={styles.header}>
+        <h2 className={styles.title}>
+          Discover trending developers
+        </h2>
+      </header>
+
       {trendingDevelopers && trendingDevelopers.length > 0 && (
         <ul className={styles.list}>
           {trendingDevelopers.map(({ username }) => (
