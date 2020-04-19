@@ -7,6 +7,7 @@ import UserForm from './components/user-form/UserForm';
 import UserCard from './components/user-card/UserCard';
 
 jest.mock('./services/github');
+jest.mock('./components/trending-developers/TrendingDevelopers', () => () => <div />);
 
 const history = {
   push: jest.fn(),

@@ -4,6 +4,7 @@ import UserCard from './components/user-card/UserCard';
 import { getUser } from './services/github';
 import UserForm from './components/user-form/UserForm';
 import styles from './App.module.css';
+import TrendingDevelopers from './components/trending-developers/TrendingDevelopers';
 
 function App({
   match,
@@ -74,6 +75,16 @@ function App({
           }}
           />
         )}
+      </div>
+
+      <header className={styles.header}>
+        <h2 className={styles.subtitle}>
+          Discover trending developers
+        </h2>
+      </header>
+
+      <div className={styles.content}>
+        <TrendingDevelopers />
       </div>
 
       <footer className={styles.footer}>

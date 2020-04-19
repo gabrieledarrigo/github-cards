@@ -1,0 +1,42 @@
+.trendingDevelopers {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .list {
+    flex-direction: row;
+  }
+}
+
+.item {
+  flex: 1 0 50%;
+  max-width: 50%;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .item {
+    padding: 1rem;
+    flex: 1;
+    text-align: left;
+  }
+}
+
+.link,
+.link:visited {
+  color: var(--color-info);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
