@@ -26,6 +26,8 @@
   --color-gray-400: #E0E0E0;
   --color-gray-500: #999999;
   --color-gray-700: #757575;
+
+  --footer-height: 59px;
 }
 
 @media (min-width: 1024px) {
@@ -38,6 +40,10 @@
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
 }
 
 html {
