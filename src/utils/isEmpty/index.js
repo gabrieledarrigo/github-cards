@@ -1,4 +1,4 @@
-export default function (entry) {
+export default function isEmpty(entry) {
   if (Array.isArray(entry) || typeof entry === 'string') {
     return entry.length === 0;
   }
