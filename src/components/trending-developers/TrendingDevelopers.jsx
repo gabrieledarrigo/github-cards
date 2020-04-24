@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import { getTrendingDevelopers } from '../../services/github';
 import styles from './TrendingDevelopers.module.css';
+import { isEmpty } from '../../utils';
 
 function TrendingDevelopers() {
   const history = useHistory();
@@ -34,7 +35,7 @@ function TrendingDevelopers() {
         </h2>
       </header>
 
-      {trendingDevelopers && trendingDevelopers.length > 0 && (
+      {trendingDevelopers && !isEmpty(trendingDevelopers) && (
         <ul className={styles.list}>
           {trendingDevelopers.map(({ username }) => (
             <li
@@ -55,7 +56,7 @@ function TrendingDevelopers() {
         </ul>
       )}
 
-      {trendingDevelopers && trendingDevelopers.length === 0 && (
+      {trendingDevelopers && isEmpty(trendingDevelopers) && (
         <div>
           Trending developer list is empty
           {' '}
