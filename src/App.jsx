@@ -99,6 +99,15 @@ function App({
           >
             @gabrieledarrigo
           </a>
+          {' '}
+          and
+          {' '}
+          <a
+            href="https://www.github.com/asso1985"
+            title="@asso1985"
+          >
+            @asso1985
+          </a>
         </p>
       </footer>
     </section>
