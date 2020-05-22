@@ -13,8 +13,8 @@
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -22,13 +22,17 @@
 
 @media screen and (min-width: 480px) {
   .list {
-    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr)
   }
 }
 
 .item {
-  flex: 1 0 50%;
-  max-width: 50%;
   padding: 0.5rem 0;
   text-align: center;
 }
@@ -36,7 +40,6 @@
 @media screen and (min-width: 480px) {
   .item {
     padding: 1rem;
-    flex: 1;
     text-align: left;
   }
 }
